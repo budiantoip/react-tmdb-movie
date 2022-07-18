@@ -9,7 +9,9 @@ const MovieList = () => {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const fetchedMovies = await axios.get("https://api.themoviedb.org/3/trending/movie/week?api_key=");
+            const fetchedMovies = await axios.get(
+              "https://api.themoviedb.org/3/trending/movie/week?api_key="
+            );
             setMovies(fetchedMovies.data.results);
         }
         

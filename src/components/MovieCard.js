@@ -30,8 +30,8 @@ const MovieCard = ({ movie }) => {
               alignItems: 'center',
             }}
           >
-            <Rating name="read-only" precision={0.1} value={movie.vote_average / 2} max={5} readOnly />
-            <Box sx={{ ml: 2 }}>{movie.vote_average}</Box>
+            <Rating name="read-only" precision={0.1} value={(movie.vote_average / 2).toFixed(2)} max={5} readOnly />
+            <Box sx={{ ml: 2 }}>{(movie.vote_average / 2).toFixed(2)}</Box>
           </Box>
         </CardContent>
       </Box>
